@@ -1,15 +1,13 @@
-# Используем официальный образ Python
 FROM python:3.9-slim
 
-# Устанавливаем рабочую директорию
-WORKDIR /app
+# Устанавливаем необходимые зависимости
+RUN apt-get update && apt-get install -y \
+    pkg-config \
+    libmysqlclient-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Копируем все файлы в рабочую директорию
-COPY . /app
+# Устанавливаем зависимости Python
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r /app/requirements.txt
 
-# Устанавливаем зависимости
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
-
-# Запускаем сервер через gunicorn
-CMD ["gunicorn", "backend.wsgi", "--bind", "0.0.0.0:$PORT"]
+# Оставшиеся инструкции...
