@@ -1,1 +1,1 @@
-web: python -m gunicorn myproject.wsgi
+web: python3 -m gunicorn backend.wsgi
