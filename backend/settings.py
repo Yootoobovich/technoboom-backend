@@ -88,11 +88,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ads_board',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'railway',  # Имя вашей базы данных
+        'USER': 'root',  # Имя пользователя
+        'PASSWORD': 'hPkKqckQbNLadLvYvQvskwLwIGESEmVx',  # Пароль
+        'HOST': 'mysql.railway.internal',  # Хост базы данных
+        'PORT': '3306',  # Порт
     }
 }
 
