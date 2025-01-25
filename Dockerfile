@@ -3,7 +3,7 @@ FROM python:3.9-slim
 # Устанавливаем необходимые зависимости
 RUN apt-get update && apt-get install -y \
     pkg-config \
-    libmysqlclient-dev \
+    libmariadb-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Устанавливаем зависимости Python
