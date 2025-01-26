@@ -8,6 +8,6 @@ RUN apt-get update && apt-get install -y \
 
 # Устанавливаем зависимости Python
 COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r /app/requirements.txt
+RUN pip install -v --no-cache-dir -r /app/requirements.txt
 
 # Оставшиеся инструкции...
