@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'railway',  # Имя вашей базы данных
         'USER': 'root',  # Имя пользователя
-        'PASSWORD': 'oGlnaNQdsCIiaYZZrnTxqWFxHPGVlJYJ',  # Пароль
+        'PASSWORD': 'hUoZEuRCxWDtMnObNiAwKaVCSEECxCMe',  # Пароль
         'HOST': 'mysql.railway.internal',  # Хост базы данных
         'PORT': '3306',  # Порт
     }
