@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 
 # Копируем requirements.txt *перед* его использованием,
 # чтобы использовать кэширование слоев Docker
-COPY requirements.txt /app/
+COPY . /app
 
 # Устанавливаем зависимости Python
 RUN pip install -v --no-cache-dir -r /app/requirements.txt
