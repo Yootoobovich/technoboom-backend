@@ -14,4 +14,9 @@ COPY requirements.txt /app/
 # Устанавливаем зависимости Python
 RUN pip install -v --no-cache-dir -r /app/requirements.txt
 
+# Устанавливаем npm (ОБЯЗАТЕЛЬНО!)
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends npm && \
+    rm -rf /var/lib/apt/lists/*
+
 # Оставшиеся инструкции вашего Dockerfile...
