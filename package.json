@@ -5,7 +5,7 @@
     "whitenoise": "^6.0.2"   // Или последняя версия WhiteNoise
   },
   "scripts": {
-    "build:static": "echo \"Запускаю collectstatic...\" && python manage.py collectstatic --noinput",
+    "build:static": "python manage.py collectstatic", // Убрали --noinput
     "start:backend": "gunicorn backend.wsgi:application --bind 0.0.0.0:$PORT" 
 }
 }
