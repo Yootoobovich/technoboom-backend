@@ -11,7 +11,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',') # Получае
 APPEND_SLASH = True  # Рекомендовано True
 
 # CORS
-CORS_ALLOW_ALL_ORIGINS = os.environ.get('CORS_ALLOW_ALL_ORIGINS', 'True').lower() == 'true'  # Получаем из переменной окружения, по умолчанию False
+CORS_ALLOW_ALL_ORIGINS = os.environ.get('CORS_ALLOW_ALL_ORIGINS', False) # Получаем из переменной окружения, по умолчанию False (логическое значение)
 CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS', '').split(',')  # Получаем из переменной окружения, список доменов или пустой список
 
 AUTH_USER_MODEL = 'users.CustomUser'
