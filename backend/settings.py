@@ -14,8 +14,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-APPEND_SLASH = False
-CORS_ORIGIN_ALLOW_ALL = True
+APPEND_SLASH = True
+CORS_ALLOW_ALL_ORIGINS = True # Для разработки. В production рекомендуется установить False и настроить CORS_ALLOWED_ORIGINS
 
 # Application definition
 AUTH_USER_MODEL = 'users.CustomUser'
